@@ -1,0 +1,148 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+ 
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+			 Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>BootyUI Demo</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+	<!-- CSS: implied media="all" -->
+	<link rel="stylesheet" href="css/style.css?v=2">
+	<!-- css concatenated and minified via ant build script -->
+	
+	<link rel="stylesheet" href="css/bootyui/bootyui.css">
+	<link rel="stylesheet" href="css/ob2/ob2.css">
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.11.custom.css">
+	<link rel="stylesheet" href="css/960.css">
+	<link rel="stylesheet" href="css/style_overrides.css">
+	<!-- end css -->
+
+	<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+	<!--<script src="js/libs/modernizr-1.7.min.js"></script>-->
+		
+
+	<style>
+		.griddemo { background-color:#F77; margin-top:7px; margin-bottom:7px;}
+		.griddemoContainer {background-color:#7FF;}
+	</style>
+</head>
+
+<body>
+	<div id="container" class="container_12 clearfix">
+		<header class="grid_12 clearfix">
+			<div class="theme">
+				<div id="bg01">hi</div>
+				<div id="bg02"></div>
+				<div id="bg03"></div>
+				<div id="bg04"></div>
+				<div id="bg05"></div>
+				<div id="bg06"></div>
+				<div id="bg07"></div>
+				<div id="bg08"></div>
+				<div id="bg09"></div>
+				<div id="bg10"></div>
+			</div>
+			
+			
+			<div class="toolbar">
+				<form>
+				<p>
+					<input name="MemberSearch" id="MemberSearch" />
+				</p>
+					
+				</form>
+				<ul>
+					<li><a href="/messages">Messages <span class="notificationBadge">1 New</span></a></li>
+					<li><a href="/comments">Comments <span class="notificationBadge">3 New</span></a></li>
+					<li><a href="/fops">FOPs</a></li>
+				</ul>
+			</div>
+		</header>
+	</div>
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+	<script src="js/libs/jquery-ui-1.8.11.custom.min.js"></script>
+
+	<!-- scripts concatenated and minified via ant build script-->
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+	<!-- end scripts-->
+
+
+	<!--[if lt IE 7 ]>
+		<script src="js/libs/dd_belatedpng.js"></script>
+		<script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+	<![endif]-->
+	<script type="text/javascript">
+	
+	var animFrame=0;
+	var animInterval = setInterval(animateTheme,32);
+	var animFucker=0;
+	var animLayers = new Array(10);
+	var animSpeeds = new Array(10);
+	var offsets = new Array(144);
+	var ELEMENT=0;
+	var CUROFFSET=1;
+	var ANIMSPEED=2;
+	var WIDTH=3;
+	animLayers[0] = [document.getElementById('bg01'),0,0,144];
+	animLayers[1] = [document.getElementById('bg02'),0,1,107];
+	animLayers[2] = [document.getElementById('bg03'),0,2,96];
+	animLayers[3] = [document.getElementById('bg04'),0,3,48];
+	animLayers[4] = [document.getElementById('bg05'),0,4,48];
+	animLayers[5] = [document.getElementById('bg06'),0,5,48];
+	animLayers[6] = [document.getElementById('bg07'),0,6,48];
+	animLayers[7] = [document.getElementById('bg08'),0,5,48];
+	animLayers[8] = [document.getElementById('bg09'),0,4,48];
+	animLayers[9] = [document.getElementById('bg10'),0,3,48];
+	
+	for(i=0;i<145;i++) {
+		offsets[i] = i + 'px 0px';
+	}
+	
+	
+	var curLayer;
+	function animateTheme() {
+		animFrame++;
+		animFucker++;
+
+		//if (animFrame%100==0) console.log('Frame ' + animFrame);
+		if (animFrame==1000) clearInterval(animInterval);
+		for (i=0;i<3;i++) {
+			curLayer = animLayers[i];
+			if (animFucker>curLayer[2]) {
+				curLayer[0].style.backgroundPosition=offsets[curLayer[1]++];
+				if (curLayer[1] == curLayer[3]) curLayer[1]=0;
+			}
+		}
+		
+		if (animFucker==5) animFucker=0;
+	}
+	
+	</script>
+	
+	
+</body>

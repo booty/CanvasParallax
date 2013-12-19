@@ -1,0 +1,279 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+ 
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+			 Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>BootyUI Demo</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+	<!-- CSS: implied media="all" -->
+	<link rel="stylesheet" href="css/style.css?v=2">
+	<!-- css concatenated and minified via ant build script -->
+	
+	<link rel="stylesheet" href="css/bootyui/bootyui.css">
+	<link rel="stylesheet" href="ob2/ob2.css">
+	<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.11.custom.css">
+	<link rel="stylesheet" href="css/960.css">
+	<link rel="stylesheet" href="css/style_overrides.css">
+	<!-- end css -->
+
+	<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+	<style>
+		.griddemo { background-color:#F77; margin-top:7px; margin-bottom:7px;}
+		.griddemoContainer {background-color:#7FF;}
+	</style>
+</head>
+
+<body>
+	<div id="container" class="container_12 clearfix">
+		<header class="grid_12 clearfix" id="themeHeader">
+			<canvas class="theme" style="width:100%; height:180px;" width="912" height="180" id="themeCanvas"></canvas>
+			<div class="toolbar" id="toolbar">					
+				<form>
+					<p>
+						<input name="MemberSearch" id="MemberSearch" />
+					</p>
+				</form>
+				<ul>
+					<li id="themeLi" data-leaf="#themeLeaf" style="width:60px">
+						<a id="tbThemes" href="">Themes</a>
+					</li>
+					<li id="messageLi" data-leaf="#messageLeaf">
+						<a id="tbMessages" href="/messages" >Messages <span class="notificationBadge">1 New</span></a>
+					</li>
+					<li id="commentLi" data-leaf="#commentLeaf">
+						<a id="tbComments" href="/comments">Comments <span class="notificationBadge">3 New</span></a>
+					</li>
+					<li id="fopLi" data-leaf="#fopLeaf">
+						<a id="tbFops" href="/fops">FOPs</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="grid_12 clearfix" id="content">
+		
+			<h1>HTML Canvas Scrolling Demo</h1>
+				
+			<p>
+				Click "themes" to see the other theme as well.
+			</p>
+			
+			<p>
+				Firefox 22+, Chrome 29, Safari 7: Works<br>
+			</p>
+			
+			<p>Duncan ripped the Shadow Of The Beast graphics.</p>
+			
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			
+			
+				
+			<div id="themeImages" style="display:none">
+			<img src="ob2/themes/musha/bg01.png" id="bg01"/>
+			<img src="ob2/themes/musha/bg02.png" id="bg02"/>
+			<img src="ob2/themes/musha/bg03.png" id="bg03"/>
+			<img src="ob2/themes/musha/bg04.png" id="bg04"/>
+			<img src="ob2/themes/musha/bg05.png" id="bg05"/>
+			<img src="ob2/themes/musha/bg06.png" id="bg06"/>
+			<img src="ob2/themes/musha/bg07.png" id="bg07"/>
+			<img src="ob2/themes/musha/bg08.png" id="bg08"/>
+			<img src="ob2/themes/musha/bg09.png" id="bg09"/>
+			<img src="ob2/themes/musha/tree.png" id="tree"/>
+			<img src="ob2/themes/musha/treeline.png" id="treeline"/>
+			<img src="ob2/themes/musha/bg0304050607.png" id="bg0304050607"/>
+			<img src="ob2/pause_white.png" id="themePlayPause" />
+			0<img src="ob2/themes/beast/0-logo.png" id="beast0" /><br>
+			1<img src="ob2/themes/beast/1-fence.png" id="beast01" /><br>
+			2<img src="ob2/themes/beast/2-grass.png" id="beast02" /><br>
+			3<img src="ob2/themes/beast/3-grass.png" id="beast03" /><br>
+			4<img src="ob2/themes/beast/4-grass.png" id="beast04" /><br>
+			5<img src="ob2/themes/beast/5-trees.png" id="beast05" /><br>
+			6<img src="ob2/themes/beast/6-clouds.png" id="beast06" /><br>
+			7<img src="ob2/themes/beast/7-grass.png" id="beast07" /><br>
+			8<img src="ob2/themes/beast/8-clouds.png" id="beast08" /><br>
+			9<img src="ob2/themes/beast/9-mountains.png" id="beast09" /><br>
+			10<img src="ob2/themes/beast/10-clouds.png" id="beast10" /><br>
+			11<img src="ob2/themes/beast/11-clouds.png" id="beast11" /><br>
+			12<img src="ob2/themes/beast/12-clouds.png" id="beast12" /><br>
+			13<img src="ob2/themes/beast/13-moon.png" id="beast13" /><br>
+			14<img src="ob2/themes/beast/14-background.png" id="beast14" /><br>
+			15<img src="ob2/themes/beast/sky.png" id="beastsky" /><br>
+			</div> 
+		</div>
+	</div>
+	
+	<section id="themeLeaf" class="leaf" style="display:none; width:250px;">
+		<p>
+			<fieldset style="width:230px" id="toolbarAnimationFieldset">
+				<legend>Theme Animation</legend>
+				<ul>
+					<li><input type="radio" name="toolbarAnimation" id="toolbarAnimOn" value="1"><label for="toolbarAnimOn">Rock on! I like awesome things</label></li>
+					<li><input type="radio" name="toolbarAnimation" id="toolbarAnimOff" value="0"><label for="toolbarAnimOff">I am weak and stupid</label></li>
+				</ul>
+			</fieldset>
+		</p>
+		<fieldset style="width:230px" id="toolbarThemes">
+			<legend>Active Theme</legend>
+			<ul id="toolbarThemeList"></ul>
+		</fieldset>
+	</section>
+	
+	<section id="messageLeaf" class="leaf" style="display:none">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+		</p>
+		<ul>
+			<li>Message 1</li>
+			<li>Message 2</li>
+			<li>Message 3</li>
+		</ul>	
+	</section>
+
+	<section id="commentLeaf" class="leaf" style="display:none">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+		</p>
+		<ul>
+			<li>Comment 1</li>
+			<li>Comment 2</li>
+			<li>Comment 3</li>
+		</ul>	
+	</section>
+	
+	<section id="fopLeaf" class="leaf" style="display:none">
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+		</p>
+		<p>
+			Hello, hello.
+		</p>
+	</section>
+
+	<!-- JavaScript at the bottom for fast page loading -->
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+	<script src='js/libs/jquery-1.6.1.min.js'></script>
+	<script src='js/libs/jquery.cookie.js'></script>
+	<script src="js/libs/jquery-ui-1.8.11.custom.min.js"></script>
+	<!-- scripts concatenated and minified via ant build script-->
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+	<script src="ob2/ob2.js"></script>
+	<!-- end scripts-->
+
+	<!--[if lt IE 7 ]>
+		<script src="js/libs/dd_belatedpng.js"></script>
+		<script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+	<![endif]-->
+	<script type="text/javascript">
+	function log(msg) {
+		//console.log(msg);
+	}
+
+	var BeastJson = {
+		'name' : 'Shadow Of The Beast',
+		'author' : 'Duncan Burris',
+		'guid' : 'shadow',
+		'animationIntervalMs' : 20,
+		'layers' : [
+			{'elementId':'beastsky', 'scrollingSpeed':999, 'widthPixels':24, 'heightPixels':180, 'yOffset':0, 'scrollingIncrementPixels':0, 'drawEveryFrame':true},
+			{'elementId':'beast06', 'scrollingSpeed':0, 'widthPixels':279, 'heightPixels':19, 'yOffset':0, 'drawEveryFrame':true},		
+			{'elementId':'beast08', 'scrollingSpeed':2, 'widthPixels':279, 'heightPixels':36, 'yOffset':23, 'drawEveryFrame':true},
+			{'elementId':'beast10', 'scrollingSpeed':4, 'widthPixels':279, 'heightPixels':17, 'yOffset':57, 'drawEveryFrame':true},
+			{'elementId':'beast11', 'scrollingSpeed':5, 'widthPixels':278, 'heightPixels':8, 'yOffset':64, 'drawEveryFrame':true},
+			{'elementId':'beast12', 'scrollingSpeed':6, 'widthPixels':279, 'heightPixels':5, 'yOffset':72, 'drawEveryFrame':true},
+			{'elementId':'beast09', 'scrollingSpeed':10, 'widthPixels':279, 'heightPixels':66, 'yOffset':88, 'drawEveryFrame':true},
+			{'elementId':'beast07', 'scrollingSpeed':3, 'widthPixels':749, 'heightPixels':3, 'yOffset':154, 'drawEveryFrame':true},
+			{'elementId':'beast04', 'scrollingSpeed':2, 'widthPixels':749, 'heightPixels':3, 'yOffset':157, 'drawEveryFrame':true},
+			{'elementId':'beast03', 'scrollingSpeed':1, 'widthPixels':749, 'heightPixels':7, 'yOffset':160, 'drawEveryFrame':true},
+			{'elementId':'beast02', 'scrollingSpeed':0, 'widthPixels':749, 'heightPixels':14, 'yOffset':166, 'drawEveryFrame':true},
+			{'elementId':'beast05', 'scrollingSpeed':3, 'widthPixels':1192, 'heightPixels':156, 'yOffset':0, 'drawEveryFrame':true},
+			{'elementId':'beast01', 'scrollingSpeed':0, 'widthPixels':278, 'heightPixels':19, 'yOffset':165, 'scrollingIncrementPixels':-4, 'drawEveryFrame':true}
+		]
+	}
+	
+	var MushaJson = {
+		'name' : 'M.U.S.H.A.',
+		'author' : 'John Booty',
+		'guid' : 'musha',
+		'animationIntervalMs' : 20,
+		'layers' : [
+			{'elementId':'bg01', 'scrollingSpeed':1, 'widthPixels':144, 'heightPixels':38, 'yOffset':-1},
+			{'elementId':'bg02', 'scrollingSpeed':4, 'widthPixels':107, 'heightPixels':44, 'yOffset':-1},
+			{'elementId':'bg03', 'scrollingSpeed':5, 'widthPixels':96, 'heightPixels':16, 'yOffset':-1},
+			{'elementId':'bg04', 'scrollingSpeed':6, 'widthPixels':48, 'heightPixels':8, 'yOffset':-1},
+			{'elementId':'bg05', 'scrollingSpeed':5, 'widthPixels':48, 'heightPixels':7, 'yOffset':-1},
+			{'elementId':'bg06', 'scrollingSpeed':4, 'widthPixels':48, 'heightPixels':7, 'yOffset':-1},
+			{'elementId':'bg07', 'scrollingSpeed':3, 'widthPixels':48, 'heightPixels':16, 'yOffset':-1},
+			{'elementId':'bg08', 'scrollingSpeed':0, 'widthPixels':48, 'heightPixels':34, 'yOffset':-1},
+			{'elementId':'bg09', 'scrollingSpeed':0, 'widthPixels':48, 'heightPixels':55, 'yOffset':-1, 'scrollingIncrementPixels':-2}
+		]	
+	}
+		
+	$(window).load(function() {
+		// initialize toolbar
+		obToolbar = new ObToolbar([BeastJson, MushaJson]);
+		obToolbar.playTheme();
+		
+		// initialize toolbar autocomplete
+		$(function() {
+				var availableTags = [
+					"ActionScript",
+					"AppleScript",
+					"Asp",
+					"BASIC",
+					"C",
+					"C++",
+					"Clojure",
+					"COBOL",
+					"ColdFusion",
+					"Erlang",
+					"Fortran",
+					"Groovy",
+					"Haskell",
+					"Java",
+					"JavaScript",
+					"Lisp",
+					"Perl",
+					"PHP",
+					"Python",
+					"Ruby",
+					"Scala",
+					"Scheme"
+				];
+				$( "#MemberSearch" ).autocomplete({
+					source: availableTags
+				});
+			});
+	});
+	</script>					
+</body>

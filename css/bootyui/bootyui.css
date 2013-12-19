@@ -1,0 +1,356 @@
+/**
+ * Primary styles
+ *
+ * Author: Team Booty
+ */
+
+body {
+  background-color:#EBEBEB;
+  padding: 0px 10px;
+}
+
+/* Containers share a common background color, padding, border, and shadow */
+section, header, footer {
+  background-color: #FFF;
+  border:1px solid #E4DEDE;
+  padding:12px;
+  margin-top:12px;
+  margin-bottom:12px;
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.1);
+}
+
+/* 
+total width (including margins and padding, of course) should be 960px for the 960gs 
+make it !important so that 960css doesn't override the width
+*/
+section.grid_12, header.grid_12, footer.grid_12 {
+  width: 912px !important;
+}
+
+/* HTML5 Boilerplate places this div around everything for reasons I don't entirely understand */
+div#container {
+  margin:0;
+  padding:0;
+  background:none;
+  border:none;
+  box-shadow:none;
+}
+
+/* ******** */
+/* Headings */ 
+/* ******** */
+
+h1, h2, h3, h4, h5, h6 { font-weight: bold; margin:12px 0; }
+
+h1 {
+	font-size:18px;
+}
+
+h2 {
+	font-size:16px;
+}
+
+h3 {
+	font-size:15px;
+}
+
+h4, h5, h6 {
+	font-size:14px;
+}
+
+p {
+	margin: 10px 0;
+}
+
+
+/* ************* */
+/* Form elements */
+/* ************* */
+
+
+optgroup {
+	font-style:normal;
+}
+
+label.left150 {
+  float:left; display:block; width:100px
+}
+
+input, textarea, select {
+  border: 1px solid rgba(0,0,0,0.4);
+  box-shadow: 0px 0px 3px rgba(0,0,0,0.25);
+}
+
+textarea {
+  height:50px;
+  padding:4px;
+  width:300px;
+}
+
+fieldset {
+	border:1px solid rgba(0,0,0,.25);
+	margin:10px 0px;
+	padding:5px;
+	width:200px;
+}
+
+input[type="submit"] {
+  padding:4px;
+}
+
+
+
+fieldset li input[type="radio"], fieldset li label {
+	float: left;
+	display: block;
+}
+
+fieldset li {
+	clear: both;
+	border-width:1px 0 0 0;
+	border-style:dotted;
+	border-color:rgba(44,44,44,0.3);	
+	padding:5px;
+}
+
+fieldset li label {
+  margin-left: 5px;
+  padding-bottom: 2px;
+}
+
+fieldset ul {
+	list-style-type:none;
+	margin:0px 5px;
+}
+
+fieldset ul li:first-child { 
+	border-top: none;
+}
+
+
+
+/* ********************* */
+/* ! Error'd form elements */
+/* ********************* */
+
+
+label.error, fieldset.error>legend {
+  text-shadow: 0px 0px 6px rgb(236,163,166);
+  -moz-text-shadow: 0px 0px 6px rgb(236,163,166);
+}
+
+
+/* would also apply to fieldset.error, but box shadow has weird offset on FF4.0 */
+input.error, input.error, textarea.error, select.error {
+  border:1px solid rgba(91,29,33,0.5);	
+}
+
+input.error, input.error, textarea.error, select.error {
+	background-color: rgba(236,163,166,0.11);
+	box-shadow: 0px 0px 6px rgba(236,163,166,0.5);
+}
+
+fieldset.error {
+	background-color: rgba(236,163,166,0.11);
+}
+
+/* ********** */
+/* Navigation */
+/* ********** */
+
+nav {
+	height:31px;
+	width: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.02)));
+	background: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.07));	
+	border-bottom: 1px solid black;
+	
+}
+
+nav a {
+	background-color:rgba(255,255,255,0.75);
+	border:solid 1px rgba(0,0,0,0.6);
+	-webkit-border-top-left-radius: 7px;
+	-webkit-border-top-right-radius: 7px;
+	-moz-border-radius-topleft: 7px;
+	-moz-border-radius-topright: 7px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	box-shadow: 0px -1px 3px rgba(0,0,0,0.2);
+	display: block;
+	height: 30px;
+	float:left;
+	line-height:30px;
+	margin:0px 3px;
+	padding: 0px 5px;
+	text-align:center;
+	text-decoration: none;
+	width:100px;
+}
+
+nav a.active {
+	background-color:#fff;
+	border-bottom:1px solid white;
+	font-weight:bold;
+}
+
+/* ***** */
+/* Lists */
+/* ***** */
+
+
+ul, ol {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* ****** */
+/* Tables */
+/* ****** */
+
+
+table {
+	border:1px solid rgba(0,0,0,0.25);
+	box-shadow:0px 0px 4px rgba(0,0,0,0.25);
+	margin:10px 0px;
+}
+
+td, th {
+	padding:3px 4px;	
+}
+
+thead {
+	background-color: rgba(0,0,0,0.05);
+	border-bottom:1px solid rgba(0,0,0,0.25);
+}
+table caption {
+	font-size:smaller;
+	font-style:italic;
+}
+
+
+/* ************ */
+/* Notice boxes */
+/* ************ */
+
+
+.noticeBox {
+  background:#fff;
+  border-style:solid;
+  border-width:1px 2px 2px 1px;
+  padding:10px;
+}
+
+.errorBox {
+  background: rgba(228,0,0,0.2);
+}
+
+.successBox {
+  background: rgba(0,228,36,0.2);
+  border-color: rgb(32,72,38);
+  color: rgb(39,89,46);
+}
+
+.informationBox {
+  background: rgba(0,116,228,0.2);
+  border-color: rgb(4,33,71);
+  color: rgb(4,33,71);
+}
+
+
+/* ******* */
+/* Buttons */
+/* ******* */
+
+
+a.awesomeButton, input[type="submit"] {
+	padding: 5px 10px 5px 10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 3px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 3px 0;
+	box-shadow: rgba(0,0,0,1) 0 3px 0;
+	text-shadow: rgba(0,0,0,.4) 0 -1px 1px;
+	color: white;
+	font-size: 14px;
+	font-family: Helvetica, Arial, Sans-Serif;
+	text-decoration: none;
+	vertical-align: middle;
+	color:#fff;
+	font-weight:bold;
+	margin: 0px 0px 2px 0px;
+	}
+
+
+a.plain, input[type="submit"] {
+	border-top: 1px solid #839EC6;
+	background: #778FB5;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4C6182), to(#778FB5));
+	background: -moz-linear-gradient(top, #4C6182, #778FB5);
+	
+	}
+	
+a.awesomeButton:hover, input[type="submit"]:hover {
+	-webkit-transform: translate(0, 1px);
+ 	-moz-transform: translate(0, 1px);
+ 	-o-transform: translate(0, 1px);
+	transform: translate(0, 1px);
+	-webkit-box-shadow: rgba(0,0,0,1) 0 2px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 2px 0;
+	box-shadow: rgba(0,0,0,1) 0 2px 0;
+}
+
+a.awesomeButton:active, input[type="submit"]:active {
+	-webkit-transform: translate(0, 2px);
+ 	-moz-transform: translate(0, 2px);
+ 	-o-transform: translate(0, 2px);
+	transform: translate(0, 2px);
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+}
+
+	
+a.plain:hover, input[type="submit"]:hover {
+	background: #778FB5;	
+	
+}	
+
+a.yes {
+	border-top: 1px solid #3A8245;
+	background: #3A8245;
+	background: -webkit-gradient(linear, left top, left bottom, from(#204826), to(#3A8245));
+	background: -moz-linear-gradient(top, #204826, #3A8245);	
+}
+
+a.yes:hover {
+	background: #3A8245;
+}
+
+a.no {
+	border-top: 1px solid #f79797;
+	background: #910743;
+	background: -webkit-gradient(linear, left top, left bottom, from(#580125), to(#910743));
+	background: -moz-linear-gradient(top, #580125, #910743);	
+}
+
+a.no:hover {
+	background: #910743;
+}
+
+
+a.disabled {
+	opacity:0.5;	
+}
+
+
+/* *********************************************** 
+	Misc
+	*********************************************** */
+	
+small {
+	color: rgba(44,44,44,0.65);		
+
+}

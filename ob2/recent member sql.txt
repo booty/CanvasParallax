@@ -1,0 +1,21 @@
+select
+	m.id_member,
+	m.login,
+	m.gender,
+	dbo.Age(m.DOB,GETDATE()) as age,
+	case 
+		when id_member_friend is not null then 1
+		else 0
+	end as friend,
+	coalesce(mlpd.logins_previous,'') as logins_previous,
+	m.id_picture_member,
+	m.about_self
+	
+from 
+	Member m 
+		left outer join Friend f on (f.ID_Member = 1238 and f.ID_Member_Friend=m.ID_Member)
+		left outer join member_login_previous_denormalized mlpd on m.ID_Member = mlpd.id_member
+where
+	m.id_member in (select top 250 id_member from member m2 order by m2.Last_Login desc)
+order by
+	m.Login
